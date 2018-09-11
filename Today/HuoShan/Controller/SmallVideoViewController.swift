@@ -52,11 +52,7 @@ class SmallVideoViewController: UIViewController {
      let collectionViewID       = "SmallVideoCellID"
 
     
-//    private let collectionView : UICollectionView       = {
-//        let collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight-40), collectionViewLayout: SmallVideoLayout())
-//        collectionView.showsVerticalScrollIndicator = false
-//        return collectionView
-//    }()
+
     
 
 
@@ -180,21 +176,7 @@ extension SmallVideoViewController {
             mk.width.equalTo(60)
         }  //
         
-//        self.view.insertSubview(collectionView, at: 0)
-//        collectionView.isPagingEnabled = true
-//        collectionView.snp.makeConstraints { (mk) in
-//            mk.left.equalTo(self.view.snp.left).offset(0)
-//            mk.top.equalTo(self.view.snp.top).offset(0)
-//            mk.bottom.equalTo(bottomView.snp.top).offset(0)
-//            mk.right.equalTo(self.view.snp.right).offset(0)
-//        }  //
-//        
-//        
-//        
-//        collectionView.register(SmallVideoCell.self, forCellWithReuseIdentifier: collectionViewID)
-//        
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
+
         
         //  设置数据
         
@@ -211,9 +193,7 @@ extension SmallVideoViewController {
         commentBtn.setTitle(smallVideo.raw_data.action.commentCount, for: .normal)
         diggBtn.setTitle(smallVideo.raw_data.action.diggCount, for: .normal)
         
-//        collectionView.reloadData()
-//        collectionView.scrollToItem(at: IndexPath(item: originalIndex, section: 0), at: .centeredHorizontally, animated: false)
-        //
+
         
         setupPlayer(currentIndex: originalIndex)
         
@@ -263,25 +243,4 @@ extension SmallVideoViewController {
     }
 }
 
-// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
-//extension SmallVideoViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-//    
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return smallVideos.count
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-////        let cell = collectionView.ym_dequeueReusableCell(indexPath: indexPath) as SmallVideoCell
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewID, for: indexPath) as? SmallVideoCell
-//        
-//        cell?.smallVideo = smallVideos[indexPath.item]
-//        
-//        return cell!
-//    }
-//    
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        let currentIndex = Int(scrollView.contentOffset.x / scrollView.width + 0.5)
-//        // 根据当前索引设置播放器
-//        setupPlayer(currentIndex: currentIndex)
-//    }
-//}
+
